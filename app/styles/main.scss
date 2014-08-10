@@ -8,8 +8,23 @@ body {
 }
 
 section {
+    position: absolute;
+    top: 0%;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+.section-one {
+    top: 0%;
+}
+
+.section-two {
+    top: 100%;
+}
+
+.section-three {
+    top: 200%;
 }
 
 .browsehappy {
