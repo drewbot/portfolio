@@ -1,0 +1,1 @@
+$(".main").onepage_scroll({sectionContainer:"section",easing:"ease",animationTime:1e3,pagination:!0,updateURL:!1,beforeMove:function(){$(".box").removeClass("show")},afterMove:function(){$(".box").addClass("show")},loop:!0,keyboard:!0,responsiveFallback:!1,direction:"vertical"}),$(".go-down").click(function(){$(".main").moveDown()});

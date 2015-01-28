@@ -1,18 +1,16 @@
 //////////////////////////////// portfolio section constructor //////////
+// function portfolioSection(sectionNumber) {
+// 	$('.main').append(function() {
+// 	  var pageNumber = sectionNumber;
+// 	  return "<section><h2>Section " + pageNumber + "</h2><div></div><button>next</button></section>";
+// 	});
+// };
 
+// var portfolioSectionOne = new portfolioSection(1);
+// var portfolioSectionTwo = new portfolioSection(2);
+// var portfolioSectionThree = new portfolioSection(3);
+// var portfolioSectionFour = new portfolioSection(4);
 
-function portfolioSection(sectionNumber) {
-	$('.main').append(function() {
-	  // var emphasis = "<em>" + $( "p" ).length + " paragraphs!</em>";
-	  // return "<p>All new content for " + emphasis + "</p>";
-	  return "<section><h2>Section " + sectionNumber + "</h2><div></div><button>next</button></section>";
-	});
-};
-
-var portfolioSectionOne = new portfolioSection(1);
-var portfolioSectionTwo = new portfolioSection(2);
-var portfolioSectionThree = new portfolioSection(3);
-var portfolioSectionFour = new portfolioSection(4);
 
 //////////////////////////////// Scroll Function /////////////////
 $(".main").onepage_scroll({
@@ -40,7 +38,6 @@ $(".main").onepage_scroll({
 $('.go-down').click(function(){
 	$(".main").moveDown();
 })
-
 
 
 
