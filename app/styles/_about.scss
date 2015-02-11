@@ -1,0 +1,7 @@
+///////////////////////////////////////// about
+.about {
+    background-color: #EDC951;
+    .about-content {
+        @include content-module();
+    }
+}

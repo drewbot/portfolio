@@ -1,0 +1,12 @@
+///////////////////////////////////////// work
+.work {
+    background-color: #2A363B;
+    .work-content {
+        @include content-module();
+        li {
+            display: inline-block;
+            width: 24.8%;
+            text-align: center;
+        }
+    }
+}

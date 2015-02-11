@@ -1,0 +1,29 @@
+///////////////////////////////////////// global
+body {
+    font-family: sans-serif;
+}
+
+a {
+    display: block;
+}
+
+input, textarea {
+    display: block;
+}
+
+///////////////////////////////////////// nav
+nav {
+    position: fixed;
+    top: 25%;
+    left: 0;
+    width: 70px;
+
+}
+
+/////////////////////////////////////// Browse happy
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}

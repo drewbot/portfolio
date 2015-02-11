@@ -1,63 +1,78 @@
-//////////////////////////////// portfolio section constructor //////////
-// function portfolioSection(sectionNumber) {
-// 	$('.main').append(function() {
-// 	  var pageNumber = sectionNumber;
-// 	  return "<section><h2>Section " + pageNumber + "</h2><div></div><button>next</button></section>";
-// 	});
-// };
-
-// var portfolioSectionOne = new portfolioSection(1);
-// var portfolioSectionTwo = new portfolioSection(2);
-// var portfolioSectionThree = new portfolioSection(3);
-// var portfolioSectionFour = new portfolioSection(4);
-
-
-//////////////////////////////// Scroll Function /////////////////
-$(".main").onepage_scroll({
-	sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-	easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
-	                                // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-	animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-	pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-	updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-	beforeMove: function(index) {
-		$('.box').removeClass('show');
-	},  // This option accepts a callback function. The function will be called before the page moves.
-	afterMove: function(index) {
-		$('.box').addClass('show');
-	},   // This option accepts a callback function. The function will be called after the page moves.
-	loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-	keyboard: true,                  // You can activate the keyboard controls
-	responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-	                                // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
-	                                // the browser's width is less than 600, the fallback will kick in.
-	direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
+// When document loads run main section animations
+$( document ).ready(function() {
+    $('.main-copy-headline').addClass('main-copy-headline-bounce');
+    $('.main-copy-paragraph').addClass('main-copy-paragraph-bounce');
+    $('.logo').addClass('logo-bounce');
 });
 
-////////////////////////////////// next button bottom /////////////
-$('.go-down').click(function(){
-	$(".main").moveDown();
+// Home button
+$('.home-button').click(function(){
+	$('.main-copy-headline').addClass('main-copy-headline-bounce');
+    $('.main-copy-paragraph').addClass('main-copy-paragraph-bounce');
+    $('.logo').addClass('logo-bounce');
+    $('.main-copy-headline').removeClass('main-copy-headline-bounce');
+    $('.main-copy-paragraph').removeClass('main-copy-paragraph-bounce');
+    console.log('click worked')
+})
+
+$('.to-top').click(function(){
+	jQuery('html,body').animate({scrollTop:0},0);
 })
 
 
 
 
+////////////////////////////////////////////////// Way points
+
+////////////////////////////////////////////////// Main div
+
+////////////////////////////////////////////////// Second div
+////////////////////////////////////////// transitions related to Main div triggered by second
+$('.second').waypoint(function(direction) {
+	if (direction === 'down') {
+		$('.main-copy-headline').removeClass('main-copy-headline-bounce');
+    	$('.main-copy-paragraph').removeClass('main-copy-paragraph-bounce');
+	} 
+}, { offset: '0%' })
+
+$('.second').waypoint(function(direction) {
+	if (direction === 'up') {
+		$('.main-copy-headline').addClass('main-copy-headline-bounce');
+    	$('.main-copy-paragraph').addClass('main-copy-paragraph-bounce');
+	} 
+}, { offset: '100%' })
 
 
+$('.second').waypoint(function(direction) {
+	if (direction === 'down') {
+		$('.box-two').addClass('box-two-move');
+	} else {
+		$('.box-two').removeClass('box-two-move');
+	}
+}, { offset: '50%' });
+
+$('.second').waypoint(function(direction) {
+	if (direction === 'down') {
+		$('.box-two').removeClass('box-two-move');
+	} else {
+		$('.box-two').addClass('box-two-move');
+	}
+}, { offset: '0%' });
 
 
+////////////////////////////////////////////////// Third div
+$('.third').waypoint(function(direction) {
+	if (direction === 'down') {
+		$('.box-three').addClass('box-two-move');
+	} else {
+		$('.box-three').removeClass('box-two-move');
+	}
+}, { offset: '50%' });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$('.third').waypoint(function(direction) {
+	if (direction === 'down') {
+		$('.box-three').removeClass('box-two-move');
+	} else {
+		$('.box-three').addClass('box-two-move');
+	}
+}, { offset: '0%' });

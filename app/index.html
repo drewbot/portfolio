@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>Portfolio of Drew Botka</title>
+        <title>Drew Botka's Portfolio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
@@ -13,7 +13,6 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/onepage-scroll.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="../bower_components/modernizr/modernizr.js"></script>
@@ -21,51 +20,104 @@
 
     </head>
     <body>
-        <!--[if lt IE 10]>
+        <!--[if lt IE 9]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <nav>
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About me</a></li>
+          </ul>
+        </nav>
 
-
-          <div class="main">
-
-            <section class="section-one">
-              <h2>Intro Frame</h2>
-              <button class="go-down">view work</button>
-            </section>
-
-            <section class="section-two">
-              <h2>Section 1</h2>
-              <div class="box"></div>
-              <button class="go-down">next</button>
-            </section>
-
-            <section class="section-three">
-              <h2>Section 2</h2>
-              <div class="box"></div>
-              <button class="go-down">next</button>
-            </section>
-
-            <section class="section-four">
-              <h2>Section 3</h2>
-              <div class="box"></div>
-              <button class="go-down">next</button>
-            </section>
-
-            <section class="section-five">
-              <h2>Last Section - Portfolio Site Overview</h2>
-              <div class="box"></div>
-              <button class="go-down">back to top</button>
-            </section>
-
+        <header id="header">
+          <div class="header-content">
+            <div class="header-logo">
+              <img src="" class="logo-illo">
+            </div>
+            <div class="header-copy">
+              <h1>Hi! Welcome to the portfolio site of</h1>
+              <img src="" class="logo-text">
+              <p>A little bit about me and how awesome I am.</p>
+              <p>You should totally check out my latest work below.</p>
+            </div>
           </div>
+        </header>
 
+        <section id="work" class="work">
+          <div class="work-content">
+            <ul>
+              <li>
+                <a href="">
+                  <figure>
+                    <img src="">
+                    <figcaption>portfolio piece 1</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <figure>
+                    <img src="">
+                    <figcaption>portfolio piece 2</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <figure>
+                    <img src="">
+                    <figcaption>portfolio piece 3</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <figure>
+                    <img src="">
+                    <figcaption>portfolio piece 3</figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
 
+        <section id="contact" class="contact">
+          <div class="contact-content">
+            <div class="contact-links">
+              <ul>
+                <li class="email"><a href="mailto:drewbotka@gmail.com">drewbotka@gmail.com</a></li>
+                <li class="twitter"><a href="https://twitter.com/thedrewbot">@thedrewbot</a></li>
+                <li class="github"><a href="github.com/drewbot">github.com/drewbot</a></li>
+                <li class="dribbble"><a href="https://dribbble.com/drewbot">dribbble.com/drewbot</a></li>
+              </ul>
+            </div>
+            <div class="contact-form">
+              <form>
+                <input class="contact-name" type="text"></input>
+                <input class="contact-email" type="email"></input>
+                <textarea class="contact-message"></textarea>
+                <button class="contact-submit">send message</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="about">
+          <div class="about-content">
+            <h1>Some more about me</h1>
+            <p>I got'cha for three minutes! yeah! bonesaw's ready! i've been everywhere from soaring with the eagles to slithering with the snakes. well rules were made to be broken. the same fire the dragon breathes. oooooh yeeeah! heavyweight atomic the macho man is right here, and i'm gonna take it to the limit! macho madness macho madness lives forever. macho and your neck could be broken! ooooooh yeah! atomic running wild the same fire the dragon breathes. hulk hogan hulk hogan i've been everywhere from soaring with the eagles to slithering with the snakes. federation federation the madness is runnin' wild! atomic man hulk hogan i want everybody to champion the madness is runnin' wild! macho madness lives forever. ultimate warrior i've been everywhere from soaring with the eagles to slithering with the snakes. freak out! bonesaw's ready! wrestling three minutes of playtime! diving i want everybody to macho i got'cha for three minutes! the same fire the dragon breathes. hey, freakshow! the macho man is right here, and i'm gonna take it to the limit! wrestling ultimate warrior you're goin' nowhere! chokehold ooooooh yeah! elbow</p>
+          </div>
+        </section>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/onepage-scroll/jquery.onepage-scroll.js"></script>
+        <script src="../bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

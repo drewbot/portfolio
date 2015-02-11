@@ -1,0 +1,9 @@
+///////////////////////////////////////// header
+header {
+    height: 80vh;
+    background-color: #00A0B0;
+    color: #ffffff;
+    .header-content {
+        @include content-module();
+    }
+}
