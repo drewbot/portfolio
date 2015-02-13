@@ -133,6 +133,13 @@
   &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
 }
 
+@mixin transform($transform) {
+  -webkit-transform: scale($transform);
+      -ms-transform: scale($transform); // IE9 only
+       -o-transform: scale($transform);
+          transform: scale($transform);
+}
+
 // Transformations
 @mixin scale($ratio...) {
   -webkit-transform: scale($ratio);

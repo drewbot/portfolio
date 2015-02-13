@@ -1,12 +1,59 @@
 ///////////////////////////////////////// work
 .work {
-    background-color: #2A363B;
-    .work-content {
-        @include content-module();
-        div {
-            height: 50px;
-            background-color: #ffffff;
-            text-align: center;
-        }
+    position: relative;
+    z-index: 1;
+    padding: 3em;
+}
+
+.work {
+	background-color: #2A363B;
+	position: relative;
+  .work-triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid $blue;
+    border-right: 100px solid transparent;
+  }
+  .work-content {
+    @include content-module();
+    h2 {
+      margin-top: -40px;
+    	margin-bottom: 60px;
+    	text-align: center;
     }
+    div {
+        height: 50px;
+        background-color: $white;
+        text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-xs-min) {
+
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+
+}
+
+@media only screen and (min-width: $screen-md-min) {
+	.work {
+    .work-content {
+      h2 {
+      	margin-bottom: 60px;
+      	text-align: right;
+      }
+      div {
+
+      }
+    }
+	}
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+
 }

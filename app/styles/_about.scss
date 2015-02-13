@@ -1,6 +1,6 @@
 ///////////////////////////////////////// about
 .about {
-    background-color: #EDC951;
+    background-color: $yellow;
     .about-content {
         @include content-module();
     }

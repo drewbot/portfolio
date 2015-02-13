@@ -14,6 +14,11 @@ ol, ul {
 h1, h2, h3, h4, h5 {
     margin: 0.2em 0;
     font-family: 'Lilita One', sans-serif;
+    letter-spacing: 0.03em;
+}
+
+h1 {
+    font-size: 2.2em;
 }
 
 p {
@@ -28,7 +33,6 @@ a {
 input, textarea {
     display: block;
 }
-
 
 /////////////////////////////////////// Browse happy
 .browsehappy {

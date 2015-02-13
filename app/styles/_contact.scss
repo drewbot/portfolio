@@ -1,6 +1,16 @@
 ///////////////////////////////////////// contact
 .contact {
-    background-color: #FF9900;
+    background-color: $orange;
+    position: relative;
+    .contact-triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid $darkblue;
+    border-left: 100px solid transparent;
+  }
     .contact-content {
         @include content-module();
         .contact-links {
