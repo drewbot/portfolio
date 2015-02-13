@@ -1,6 +1,24 @@
 ///////////////////////////////////////// global
 body {
-    font-family: sans-serif;
+    font-family: 'Bree Serif', serif;
+    font-size: 1em;
+    color: $white;
+    @include font-smoothing(antialiased);
+}
+
+ol, ul {
+    list-style: none;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0.2em 0;
+    font-family: 'Lilita One', sans-serif;
+}
+
+p {
+    font-size: 1.15em;
+    line-height: 1.8em;
 }
 
 a {
@@ -11,14 +29,6 @@ input, textarea {
     display: block;
 }
 
-///////////////////////////////////////// nav
-nav {
-    position: fixed;
-    top: 25%;
-    left: 0;
-    width: 70px;
-
-}
 
 /////////////////////////////////////// Browse happy
 .browsehappy {

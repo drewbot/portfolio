@@ -4,12 +4,17 @@
     .contact-content {
         @include content-module();
         .contact-links {
-        	display: inline-block;
-        	width: 48.9%;
+            text-align: right;
         }
         .contact-form {
-        	display: inline-block;
-        	width: 48.9%;
+            form {
+                input, textarea {
+                    @include primary-input();
+                }
+                button {
+                    @include primary-button();
+                }
+            }
         }
     }
 }

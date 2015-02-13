@@ -3,9 +3,9 @@
     background-color: #2A363B;
     .work-content {
         @include content-module();
-        li {
-            display: inline-block;
-            width: 24.8%;
+        div {
+            height: 50px;
+            background-color: #ffffff;
             text-align: center;
         }
     }

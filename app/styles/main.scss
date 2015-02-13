@@ -1,7 +1,22 @@
-@import "reset";
+
+// Setup
 @import "variables";
 @import "mixins";
+
+// Reset and dependencies
+@import "normalize";
+
+// Core CSS
+@import "box-sizing";
+@import "grid";
+
+// Utility classes
+@import "utilities";
+@import "responsive-utilities";
+
+// Modules
 @import "global";
+@import "nav";
 @import "header";
 @import "work";
 @import "contact";

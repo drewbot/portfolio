@@ -1,20 +1,14 @@
-/////////////////////////////////////// Mixins
-@mixin animation($animate...) {
-    $max: length($animate);
-    $animations: '';
+// Utilities
+@import "mixins/hide-text";
+@import "mixins/responsive-visibility";
+@import "mixins/vendor-prefixes";
 
-    @for $i from 1 through $max {
-        $animations: #{$animations + nth($animate, $i)};
+// Layout 
+@import "mixins/clearfix";
+@import "mixins/center-block";
+@import "mixins/grid-framework";
+@import "mixins/grid";
 
-        @if $i < $max {
-            $animations: #{$animations + ", "};
-        }
-    }
-    -webkit-animation: $animations;
-    -moz-animation:    $animations;
-    -o-animation:      $animations;
-    animation:         $animations;
-}
 
 @mixin keyframes($animationName) {
     @-webkit-keyframes #{$animationName} {
@@ -94,8 +88,63 @@
     transform: $transformation;
 }
 
+@mixin font-smoothing($smoothing) {
+    -webkit-font-smoothing: $smoothing;
+    -moz-font-smoothing: $smoothing;
+    -o-font-smoothing: $smoothing;
+    font-smoothing: $smoothing;
+}
+
+/////////////////////////////////////////////// Content mixins
+
 @mixin content-module() {
     margin: 0 auto;
     max-width: 1120px;
     padding: 50px;
+}
+
+// Text
+@mixin primary-text($size, $weight, $style, $color) {
+    // font-family: $primary-typeface;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    color: $color;
+}
+
+@mixin secondary-text($size, $color) {
+    // font-family: $secondary-typeface;
+    font-size: $size;
+    color: $color;
+}
+
+// Button
+@mixin primary-button() {
+    padding: 20px 25px 20px 25px;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #fff;
+    outline: none;
+    @include transition(all 80ms ease-in);
+    &:hover {
+
+    }
+    &:active {
+
+    }
+}
+
+// input mixin
+@mixin primary-input() {
+    padding: 10px;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    outline: none;
+    @include transition(all 80ms ease-in);
+    &:hover {
+        
+    }
 }
