@@ -79,23 +79,27 @@
 // Button
 @mixin primary-button($bg-color) {
     padding: 17px 25px 20px 25px;
-    background-color: $bg-color;
+    background-color: darken($bg-color, 2%);
     font-family: "Londrina Shadow", sans-serif;
     font-size: 2.2em;
     color: $white;
     text-align: center;
     @include font-smoothing(auto);
-    border-width: 1px 2px 2px 1px;
+    border-width: 1px 2px 3px 1px;
     border-style: solid;
     border-color: $white;
     border-radius: 3px;
     outline: none;
-    @include transition(all 80ms ease-in);
+    @include transition(all 170ms ease-in);
     &:hover {
-        background-color: darken($bg-color, 3%)
+        background-color: lighten($bg-color, 2%);
     }
     &:active {
-
+        margin-top: 2px;
+        // background-color: lighten($bg-color, 1%);
+        color: darken($bg-color, 15%);
+        border-color: darken($bg-color, 12%);
+        border-width: 1px;
     }
 }
 

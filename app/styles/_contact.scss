@@ -55,7 +55,7 @@
                 }
                 .contact-message {
                     position: relative;
-                    margin-bottom: 20px;
+                    margin-bottom: 65px;
                     height: 60px;
                     textarea {
                         position: absolute;
@@ -74,24 +74,24 @@
                     top: 10px;
                     display: none;
                     color: darken($orange, 10%);
-                    @include transition(all 500ms ease-in);
+                    @include transition(all 800ms ease-in);
                 }
                 .message-label {
                     position: absolute;
                     top: 10px;
                     display: none;
                     color: darken($orange, 10%);
-                    @include transition(all 500ms ease-in);
+                    @include transition(all 800ms ease-in);
                 }
                 .input-focus-animate {
                     display: inline-block;
                     top: 0;
-                    @include transition(all 500ms ease-in);
+                    @include transition(all 800ms ease-in);
                 }
                 @include placeholder(1em, $white);
                 button {
-                    margin-top: 65px;
                     @include primary-button($orange);
+                    // margin-top: 65px;
                 }
             }
         }
