@@ -1,6 +1,12 @@
 ///////////////////////////////////////// about
 .about {
     background-color: $yellow;
+    .about-banner {
+        @include content-module();
+        .about-show {
+        	@include primary-button($yellow)
+        }
+    }
     .about-content {
         @include content-module();
     }

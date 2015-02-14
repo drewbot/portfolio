@@ -9,6 +9,7 @@
 @import "mixins/grid-framework";
 @import "mixins/grid";
 
+//////////////////////////////////////////////// Global Mixins
 
 @mixin font-smoothing($smoothing) {
     -webkit-font-smoothing: $smoothing;
@@ -17,12 +18,47 @@
     font-smoothing: $smoothing;
 }
 
+@mixin placeholder($font-size, $color) {
+    input::-webkit-input-placeholder {
+        font-size: $font-size;
+        color: $color;
+    }
+    input:-moz-placeholder { /* Firefox 18- */
+        font-size: $font-size;
+        color: $color;  
+    }
+    input::-moz-placeholder {  /* Firefox 19+ */
+        font-size: $font-size;
+        color: $color;  
+    }
+    input:-ms-input-placeholder {  
+        font-size: $font-size;
+        color: $color;  
+    }
+    textarea::-webkit-input-placeholder {
+        font-size: $font-size;
+        color: $color;
+    }
+    textarea:-moz-placeholder { /* Firefox 18- */
+        font-size: $font-size;
+        color: $color;  
+    }
+    textarea::-moz-placeholder {  /* Firefox 19+ */
+        font-size: $font-size;
+        color: $color;  
+    }
+    textarea:-ms-textarea-placeholder {  
+        font-size: $font-size;
+        color: $color;  
+    }
+}
+
 /////////////////////////////////////////////// Content mixins
 
 @mixin content-module() {
     margin: 0 auto;
     max-width: 1120px;
-    padding: 50px;
+    padding: 60px 40px 60px 40px;
 }
 
 // Text
@@ -41,16 +77,22 @@
 }
 
 // Button
-@mixin primary-button() {
-    padding: 20px 25px 20px 25px;
-    background-color: transparent;
-    color: #fff;
+@mixin primary-button($bg-color) {
+    padding: 17px 25px 20px 25px;
+    background-color: $bg-color;
+    font-family: "Londrina Shadow", sans-serif;
+    font-size: 2.2em;
+    color: $white;
     text-align: center;
-    border: 2px solid #fff;
+    @include font-smoothing(auto);
+    border-width: 1px 2px 2px 1px;
+    border-style: solid;
+    border-color: $white;
+    border-radius: 3px;
     outline: none;
     @include transition(all 80ms ease-in);
     &:hover {
-
+        background-color: darken($bg-color, 3%)
     }
     &:active {
 
@@ -59,10 +101,15 @@
 
 // input mixin
 @mixin primary-input() {
+    position: relative;
+    display: block;
+    // margin-bottom: 20px;
     padding: 10px;
     width: 100%;
     background-color: transparent;
-    border: 2px solid #fff;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: $white;
     color: #fff;
     outline: none;
     @include transition(all 80ms ease-in);

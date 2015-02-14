@@ -104,11 +104,20 @@
                 </ul>
               </div>
               <div class="contact-form col-xs-12 col-sm-6">
-                <form>
-                  <input class="contact-name" type="text"></input>
-                  <input class="contact-email" type="email"></input>
-                  <textarea class="contact-message"></textarea>
-                  <button class="contact-submit">send message</button>
+                <form class="clearfix">
+                  <div class="contact-name">
+                    <label for="contact-name" class="name-label">What's your name?</label>
+                    <input id="contact-name" type="text" placeholder="What's your name?">
+                  </div>
+                  <div class="contact-email">
+                    <label for="contact-email" class="email-label">...your email?</label>
+                    <input id="contact-email" type="email" placeholder="...your email?"></input>
+                  </div>
+                  <div class="contact-message">
+                    <label for="contact-message" class="message-label">What's up?</label>
+                    <textarea id="contact-message" placeholder="What's up?"></textarea>
+                  </div>
+                  <button class="contact-submit pull-right">Send a message</button>
                 </form>
               </div>
             </div>
@@ -116,9 +125,19 @@
         </section>
 
         <section id="about" class="about">
-          <div class="about-content">
-            <h2>Whoa whoa whoa!</h2>
-            <p>Moving too fast? Want to get to know me a little bit better?</p>
+          <div class="container-fluid">
+            <div class="about-banner row">
+              <div class="about-banner-text col-xs-12 col-sm-8">
+                <h2>Whoa whoa whoa!</h2>
+                <p>Moving too fast? Want to get to know me a little bit better?</p>
+              </div>
+              <div class="about-banner-button col-xs-12 col-sm-4 clearfix">
+                <button class="about-show pull-right">Learn more</button>
+              </div>
+            </div>
+            <div class="about-content row">
+
+            </div>
           </div>
         </section>
 

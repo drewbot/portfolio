@@ -2,27 +2,96 @@
 .contact {
     background-color: $orange;
     position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        background-color: $orange;
+    }
     .contact-triangle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-top: 20px solid $darkblue;
-    border-left: 100px solid transparent;
-  }
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 20px solid $darkblue;
+        border-left: 100px solid transparent;
+    }
     .contact-content {
         @include content-module();
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 60px;
+        }
         .contact-links {
-            text-align: right;
+            // text-align: right;
         }
         .contact-form {
             form {
-                input, textarea {
-                    @include primary-input();
+                .contact-name {
+                    position: relative;
+                    margin-bottom: 20px;
+                    height: 60px;
+                    input {
+                        position: absolute;
+                        bottom: 0;
+                    }
                 }
+                .contact-email {
+                    position: relative;
+                    margin-bottom: 20px;
+                    height: 60px;
+                    input {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+                .contact-message {
+                    position: relative;
+                    margin-bottom: 20px;
+                    height: 60px;
+                    textarea {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+                .name-label {
+                    position: absolute;
+                    top: 10px;
+                    display: none;
+                    color: darken($orange, 10%);
+                    @include transition(all 500ms ease-in);
+                }
+                .email-label {
+                    position: absolute;
+                    top: 10px;
+                    display: none;
+                    color: darken($orange, 10%);
+                    @include transition(all 500ms ease-in);
+                }
+                .message-label {
+                    position: absolute;
+                    top: 10px;
+                    display: none;
+                    color: darken($orange, 10%);
+                    @include transition(all 500ms ease-in);
+                }
+                .input-focus-animate {
+                    display: inline-block;
+                    top: 0;
+                    @include transition(all 500ms ease-in);
+                }
+                @include placeholder(1em, $white);
                 button {
-                    @include primary-button();
+                    margin-top: 65px;
+                    @include primary-button($orange);
                 }
             }
         }
