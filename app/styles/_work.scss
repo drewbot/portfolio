@@ -5,7 +5,7 @@
 }
 
 .work {
-	background-color: #2A363B;
+	background-color: $darkblue;
 	position: relative;
   &:after {
     content: '';
@@ -15,10 +15,13 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 100%;
-    background-color: $darkblue;
+    border: 15px solid $darkblue;
+    background-color: $blue;
+    background: url('../images/down-arrow.svg') center center no-repeat;
+    // background-size: something;
   }
   .work-triangle {
     position: absolute;
@@ -29,21 +32,29 @@
   }
   .work-content {
     @include content-module();
+    padding: 80px 40px 110px 40px;
     h2 {
-      margin-top: 30px;
-    	margin-bottom: 60px;
+      margin-top: 12px;
+    	margin-bottom: 90px;
     	text-align: center;
     }
     div {
       a {
         display: block;
         figure {
+          position: relative;
           margin: 0;
-            img {
-              width: 100%;
-            }
+          img {
+            width: 100%;
+          }
           figcaption {
-
+            text-align: center;
+            position: absolute;
+            top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
           }
         }
       }
@@ -63,7 +74,7 @@
 	.work {
     .work-content {
       h2 {
-      	margin-bottom: 60px;
+      	margin-bottom: 90px;
       	text-align: right;
       }
       div {

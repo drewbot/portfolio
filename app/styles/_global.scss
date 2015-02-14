@@ -9,6 +9,7 @@ body {
 ol, ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5 {
@@ -43,10 +44,6 @@ input, textarea {
         height: 4px;
         background-color: $yellow;
     }
-}
-
-textarea {
-    height: 42px;
 }
 
 /////////////////////////////////////// Browse happy

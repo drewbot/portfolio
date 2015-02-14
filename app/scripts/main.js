@@ -17,9 +17,14 @@ var getWindowSetTriangle = function(){
 	});
 }
 
+// establishing image size in gallery
+// The anchor seems to be what was causing the staggering
 var getWidthSetHeight = function(){
+	// get the width of the column
 	var imageWidth = $('.work-content div').width();
-	$('.work-content div').height(imageWidth / 1.3);
+	// set the height based on ratio
+	$('.work-content div').height(imageWidth / 1.2);
+	// set width and height of <a> based on div size
 	$('.work-content div a').width(imageWidth);
 	$('.work-content div a').height(imageWidth / 1.3);
 }
@@ -52,7 +57,7 @@ $('.contact-email input').focusin( function(){
 	$(this).attr('placeholder','');
 	$('.email-label').toggleClass('input-focus-animate');
 });
-$('.contact-message textarea').focusin( function(){
+$('.contact-message input').focusin( function(){
 	$(this).css({
 		"border-bottom-color" : "#D66611"
 	});
@@ -75,10 +80,16 @@ $('.contact-email input').focusout( function(){
 	$(this).attr('placeholder','...your email?');
 	$('.email-label').toggleClass('input-focus-animate');
 });
-$('.contact-message textarea').focusout( function(){
+$('.contact-message input').focusout( function(){
 	$(this).css({
 		"border-bottom-color" : "#ffffff"
 	});
 	$(this).attr('placeholder','What\'s up?');
 	$('.message-label').toggleClass('input-focus-animate');
 });
+
+
+// Show About content 
+$('.about-show').click(function(){
+	$('.about-content').toggle();
+})

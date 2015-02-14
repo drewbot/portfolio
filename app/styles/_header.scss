@@ -6,7 +6,7 @@ header {
     .header-content {
         @include content-module();
         .header-copy {
-        	padding: 80px 0;
+        	padding: 100px 0;
         }
     }
 }

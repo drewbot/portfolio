@@ -10,10 +10,13 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
         border-radius: 100%;
-        background-color: $orange;
+        border: 15px solid $orange;
+        background-color: $darkblue;
+        background: url('../images/down-arrow-o.svg') center center no-repeat;
+        // background-size: something;
     }
     .contact-triangle {
         position: absolute;
@@ -27,15 +30,27 @@
     .contact-content {
         @include content-module();
         h2 {
-            margin-top: 30px;
+            margin-top: 32px;
             margin-bottom: 60px;
         }
         .contact-links {
-            // text-align: right;
+            padding: 15px 20px 30px 0;
+            line-height: 3.4em;
+            a {
+                text-align: left;
+                i {
+                    margin-right: 20px;
+                    margin-left: 20px;
+                    font-size: 1.5em;
+                }
+                &:hover {
+                    background-color: lighten($orange, 7%)
+                }
+            }
         }
         .contact-form {
             form {
-                .contact-name {
+                .contact-name, .contact-email, .contact-message {
                     position: relative;
                     margin-bottom: 20px;
                     height: 60px;
@@ -44,44 +59,15 @@
                         bottom: 0;
                     }
                 }
-                .contact-email {
-                    position: relative;
-                    margin-bottom: 20px;
-                    height: 60px;
-                    input {
-                        position: absolute;
-                        bottom: 0;
-                    }
-                }
-                .contact-message {
-                    position: relative;
-                    margin-bottom: 65px;
-                    height: 60px;
-                    textarea {
-                        position: absolute;
-                        bottom: 0;
-                    }
-                }
-                .name-label {
+                .name-label, .email-label, .message-label {
                     position: absolute;
                     top: 10px;
                     display: none;
                     color: darken($orange, 10%);
                     @include transition(all 500ms ease-in);
                 }
-                .email-label {
-                    position: absolute;
-                    top: 10px;
-                    display: none;
-                    color: darken($orange, 10%);
-                    @include transition(all 800ms ease-in);
-                }
-                .message-label {
-                    position: absolute;
-                    top: 10px;
-                    display: none;
-                    color: darken($orange, 10%);
-                    @include transition(all 800ms ease-in);
+                .contact-message {
+                    margin-bottom: 70px;
                 }
                 .input-focus-animate {
                     display: inline-block;
