@@ -39,8 +39,32 @@
     	text-align: center;
     }
     div {
+      position: relative;
       a {
         display: block;
+        &::after {
+          content: ' ';
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: $white;
+          z-index: 1;
+          -webkit-transition: all 0.3s ease;
+        }
+        &:hover {
+          figcaption {
+            visibility: visible;
+            opacity: 1;
+            -webkit-transition: all 0.3s ease;
+          }
+          &::after {
+            opacity: 0.85;
+            -webkit-transition: all 0.3s ease;
+          }
+        }
         figure {
           position: relative;
           margin: 0;
@@ -48,6 +72,7 @@
             width: 100%;
           }
           figcaption {
+            visibility: hidden;
             text-align: center;
             position: absolute;
             top: 50px;
@@ -55,6 +80,8 @@
             margin-right: auto;
             left: 0;
             right: 0;
+            color: $darkblue;
+            z-index: 2;
           }
         }
       }
