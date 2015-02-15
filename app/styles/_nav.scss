@@ -1,39 +1,77 @@
 ///////////////////////////////////////// nav
 nav {
   position: fixed;
-  top: 35vh;
-  // bottom: 0;
+  bottom: 0;
   left: 0;
+  width: 100%;
   background-color: lighten($darkblue, 10%);
   z-index: 9999;
   ul {
   	li {
-  		// display: inline-block;
-  		&:first-of-type a {
-  			padding-top: 30px;
-  		}
-  		&:last-of-type a {
-  			padding-bottom: 30px;
-  		}
+      display: inline-block;
+      width: 24%;
+      text-align: center;
+      &:hover {
+        background-color: lighten($darkblue, 20%);
+        span {
+          display: inline-block;
+        }
+      }
   		a {
-  			display: block;
-  			padding: 15px 20px 15px 20px;
-  			@include transition(all 0.3s ease);
-  			&:hover {
-  				background-color: lighten($darkblue, 20%);
-  				@include transition(all 0.3s ease);
-  				span {
-  					display: inline-block;
-  					margin-left: 10px;
-  					@include transition(all 0.3s ease);
-  				}
-  			}
+  			display: inline-block;
+        padding: 15px 5px 15px 5px;
+        .fa {
+          font-size: 0.9em;
+        }
   			span {
-  				display: none;
-  				margin-left: -10px;
-  				@include transition(all 0.3s ease);
+  				margin-left: 3px;
+          font-size: 0.8em
   			}
   		}
   	}
   }
+}
+
+@media only screen and (min-width: $screen-xs-min) {
+
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  nav {
+    bottom: 35vh;
+    width: auto;
+    ul {
+      li {
+        display: block;
+        width: auto;
+        text-align: left;
+        &:first-of-type a {
+          padding-top: 30px;
+        }
+        &:last-of-type a {
+          padding-bottom: 30px;
+        }
+        a {
+          display: block;
+          padding: 15px 20px 15px 20px;
+          .fa {
+            font-size: 1.2em;
+          }
+          span {
+            display: none;
+            margin-left: 10px;
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+
 }
