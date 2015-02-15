@@ -89,7 +89,11 @@
 }
 
 @media only screen and (min-width: $screen-sm-min) {
-
+    .contact {
+        .contact-content {
+          padding: 60px 40px 60px 80px;
+        }
+    }
 }
 
 @media only screen and (min-width: $screen-md-min) {

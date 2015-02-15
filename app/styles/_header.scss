@@ -16,7 +16,11 @@ header {
 }
 
 @media only screen and (min-width: $screen-sm-min) {
-
+    header {
+        .header-content {
+          padding: 60px 40px 60px 80px;
+        }
+    }
 }
 
 @media only screen and (min-width: $screen-md-min) {
@@ -25,8 +29,8 @@ header {
 
 @media only screen and (min-width: $screen-lg-min) {
 	header {
-    .header-content {
-      padding: 60px 40px 60px 40px;
-    }
+        .header-content {
+          padding: 60px 40px 60px 40px;
+        }
 	}
 }

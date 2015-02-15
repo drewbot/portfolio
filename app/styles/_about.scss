@@ -18,7 +18,14 @@
 }
 
 @media only screen and (min-width: $screen-sm-min) {
-
+    .about {
+        .about-banner {
+          padding: 60px 40px 60px 80px;
+        }
+        .about-content {
+          padding: 60px 40px 60px 80px;
+        }
+    }
 }
 
 @media only screen and (min-width: $screen-md-min) {
@@ -27,6 +34,9 @@
 
 @media only screen and (min-width: $screen-lg-min) {
     .about {
+        .about-banner {
+          padding: 60px 40px 60px 40px;
+        }
         .about-content {
           padding: 60px 40px 60px 40px;
         }

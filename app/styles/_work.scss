@@ -32,7 +32,7 @@
   }
   .work-content {
     @include content-module();
-    padding: 80px 40px 110px 80px;
+    padding: 80px 40px 110px 40px;
     h2 {
       margin-top: 12px;
     	margin-bottom: 90px;
@@ -102,7 +102,11 @@
 }
 
 @media only screen and (min-width: $screen-sm-min) {
-
+  .work {
+    .work-content {
+      padding: 80px 40px 110px 80px;
+    }
+  }
 }
 
 @media only screen and (min-width: $screen-md-min) {
