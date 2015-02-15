@@ -1,26 +1,39 @@
 ///////////////////////////////////////// nav
 nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: lighten($darkblue, 10%);
-    z-index: 9999;
-    ul {
-    	li {
-    		// display: inline-block;
-    		&:first-of-type a {
-    			padding-top: 30px;
-    		}
-    		&:last-of-type a {
-    			padding-bottom: 30px;
-    		}
-    		a {
-    			display: block;
-    			padding: 15px 20px 15px 20px;
-    			&:hover {
-    				background-color: lighten($darkblue, 20%)
-    			}
-    		}
-    	}
-    }
+  position: fixed;
+  top: 35vh;
+  // bottom: 0;
+  left: 0;
+  background-color: lighten($darkblue, 10%);
+  z-index: 9999;
+  ul {
+  	li {
+  		// display: inline-block;
+  		&:first-of-type a {
+  			padding-top: 30px;
+  		}
+  		&:last-of-type a {
+  			padding-bottom: 30px;
+  		}
+  		a {
+  			display: block;
+  			padding: 15px 20px 15px 20px;
+  			@include transition(all 0.3s ease);
+  			&:hover {
+  				background-color: lighten($darkblue, 20%);
+  				@include transition(all 0.3s ease);
+  				span {
+  					display: inline-block;
+  					margin-left: 10px;
+  					@include transition(all 0.3s ease);
+  				}
+  			}
+  			span {
+  				display: none;
+  				margin-left: -10px;
+  				@include transition(all 0.3s ease);
+  			}
+  		}
+  	}
+  }
 }

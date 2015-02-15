@@ -22,20 +22,19 @@ var getWindowSetTriangle = function(){
 var getWidthSetHeight = function(){
 	// get the width of the column
 	var imageWidth = $('.work-content div').width();
-	// set the height based on ratio
-	$('.work-content div').height(imageWidth / 1.2);
+	var imageHeight = $('.work-content div').height();
 	// set width and height of <a> based on div size
 	$('.work-content div a').width(imageWidth);
-	$('.work-content div a').height(imageWidth / 1.3);
+	$('.work-content div a').height(imageHeight);
 }
 
 getWindowSetTriangle();
-getWidthSetHeight();
+// getWidthSetHeight();
 
 // On resize get window width
 window.onresize = function(event) {
   getWindowSetTriangle();
-  getWidthSetHeight();
+  // getWidthSetHeight();
 };
 
 

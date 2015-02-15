@@ -55,12 +55,6 @@
 
 /////////////////////////////////////////////// Content mixins
 
-@mixin content-module() {
-    margin: 0 auto;
-    max-width: 1120px;
-    padding: 60px 40px 60px 40px;
-}
-
 // Text
 @mixin primary-text($size, $weight, $style, $color) {
     // font-family: $primary-typeface;
@@ -121,3 +115,10 @@
         
     }
 }
+
+@mixin content-module() {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 60px 40px 60px 80px;
+}
+

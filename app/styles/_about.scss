@@ -12,3 +12,23 @@
         @include content-module();
     }
 }
+
+@media only screen and (min-width: $screen-xs-min) {
+
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+
+}
+
+@media only screen and (min-width: $screen-md-min) {
+
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+    .about {
+        .about-content {
+          padding: 60px 40px 60px 40px;
+        }
+    }
+}
