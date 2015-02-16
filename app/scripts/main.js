@@ -19,7 +19,7 @@ var getWindowSetTriangle = function(){
 
 // establishing image size in gallery
 // The anchor seems to be what was causing the staggering
-var getWidthSetHeight = function(){
+var getWidthSetImage = function(){
 	// get the width of the column
 	var imageWidth = $('.work-content div').width();
 	var imageHeight = $('.work-content div').height();
@@ -28,13 +28,21 @@ var getWidthSetHeight = function(){
 	$('.work-content div a').height(imageHeight);
 }
 
+// Get detail image height and set detail-stat-links height
+var detailImageHeight = function(){
+	var imageHeight = $('.detail-image').height();
+	$('.detail-stat-links').height(imageHeight);
+}
+
 getWindowSetTriangle();
-// getWidthSetHeight();
+// getWidthSetImage();
+detailImageHeight();
 
 // On resize get window width
 window.onresize = function(event) {
   getWindowSetTriangle();
-  // getWidthSetHeight();
+  // getWidthSetImage();
+  detailImageHeight();
 };
 
 

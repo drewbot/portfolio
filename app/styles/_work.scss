@@ -19,7 +19,7 @@
     height: 130px;
     border-radius: 100%;
     border: 15px solid $darkblue;
-    background-color: $blue;
+    background-color: $darkblue;
     background: url('../images/down-arrow.svg') center center no-repeat;
     // background-size: something;
   }
@@ -126,7 +126,11 @@
 @media only screen and (min-width: $screen-lg-min) {
   .work {
     .work-content {
-      padding: 80px 40px 110px 40px;
+      padding: 80px 40px 120px 40px;
+      h2 {
+        margin-bottom: 120px;
+        text-align: right;
+      }
     }
   }
 }

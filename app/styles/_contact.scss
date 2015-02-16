@@ -14,7 +14,7 @@
         height: 130px;
         border-radius: 100%;
         border: 15px solid $orange;
-        background-color: $darkblue;
+        background-color: $orange;
         background: url('../images/down-arrow-o.svg') center center no-repeat;
         // background-size: something;
     }
@@ -41,7 +41,7 @@
                 i {
                     margin-right: 20px;
                     margin-left: 20px;
-                    font-size: 1.5em;
+                    font-size: 1.3em;
                 }
                 &:hover {
                     background-color: lighten($orange, 7%)

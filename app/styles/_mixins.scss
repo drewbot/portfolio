@@ -94,6 +94,7 @@
         color: darken($bg-color, 15%);
         border-color: darken($bg-color, 12%);
         border-width: 1px;
+        @include transition(all 100ms ease-in);
     }
 }
 
