@@ -50,6 +50,7 @@
 	background-color: $darkblue;
 	.detail-content {
 		@include content-module();
+		padding-bottom: 100px;
 		h1 {
 			display: none;
 			text-align: center;
