@@ -1,5 +1,6 @@
-// get window width
 
+/////////////////////////////////////// Triangles
+// get window width
 var getWindowSetTriangle = function(){
 	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 	// Set css triangles on work section and contact section to window width
@@ -28,27 +29,17 @@ var getWidthSetImage = function(){
 	$('.work-content div a').height(imageHeight);
 }
 
-// Get detail image height and set detail-stat-links height
-// var detailImageHeight = function(){
-// 	var imageHeight = $('.detail-image').height();
-// 	$('.detail-stat-links').height(imageHeight);
-// }
-
 getWindowSetTriangle();
-// getWidthSetImage();
-// detailImageHeight();
 
 // On resize get window width
 window.onresize = function(event) {
   getWindowSetTriangle();
-  // getWidthSetImage();
-  // detailImageHeight();
 };
 
 
 
 
-
+/////////////////////////////////// Contact form
 // focus in on new item input changes border color
 $('.contact-name input').focusin( function(){
 	$(this).css({
@@ -95,7 +86,7 @@ $('.contact-message input').focusout( function(){
 	$('.message-label').toggleClass('input-focus-animate');
 });
 
-
+////////////////////////////////////// About
 // Show About content 
 $('.about-show').click(function(){
 	$('.about-content').toggle();

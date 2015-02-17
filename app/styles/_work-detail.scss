@@ -2,6 +2,7 @@
 	background-color: $darkblue;
 	.detail-content {
 		@include content-module();
+		padding-bottom: 0;
 		position: relative;
 		.detail-image {
 			img {
@@ -69,6 +70,7 @@
 				.languages {
 					
 					.image-wrapper {
+						padding: 0 40px 0 40px;
 						img {
 						}
 					}
@@ -86,13 +88,14 @@
 @media only screen and (min-width: $screen-sm-min) {
 	.detail-top {
 		.detail-content {
+			padding-bottom: 60px;
 			.detail-image {
-				padding-right: 20px;
+				padding-right: 10px;
 				img {
 				}
 			}
 			.detail-stat-links {
-				padding-left: 20px;
+				padding-left: 10px;
 				padding-top: 0;
 				padding-bottom: 0;
 				.languages {
@@ -106,14 +109,7 @@
 			}
 			.detail-buttons {
 				position: absolute;
-					button {
-					width: 44%;
-					&:first-of-type {
-						margin-right: 2%;
-					}
-					&:last-of-type {
-						margin-left: 2%;
-					}
+				button {
 				}
 			}
 		}
@@ -141,16 +137,7 @@
 				}
 			}
 			.detail-buttons {
-				// button {
-				// 	font-size: 1.8em;
-				// 	width: 44%;
-				// 	&:first-of-type {
-				// 		margin-right: 2%;
-				// 	}
-				// 	&:last-of-type {
-				// 		margin-left: 2%;
-				// 	}
-				// }
+
 			}
 		}
 	}

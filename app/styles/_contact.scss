@@ -34,10 +34,11 @@
             margin-bottom: 60px;
         }
         .contact-links {
-            padding: 15px 20px 30px 0;
+            padding: 15px 0 30px 0;
             line-height: 3.4em;
             a {
                 text-align: left;
+                font-size: 0.85em;
                 i {
                     margin-right: 20px;
                     margin-left: 20px;
@@ -63,6 +64,7 @@
                     position: absolute;
                     top: 10px;
                     display: none;
+                    font-size: 0.85em;
                     color: darken($orange, 10%);
                     @include transition(all 500ms ease-in);
                 }
@@ -74,7 +76,7 @@
                     top: 0;
                     @include transition(all 800ms ease-in);
                 }
-                @include placeholder(1em, $white);
+                @include placeholder(0.85em, $white);
                 button {
                     @include primary-button($orange);
                     // margin-top: 65px;
@@ -85,19 +87,73 @@
 }
 
 @media only screen and (min-width: $screen-xs-min) {
-
+    .contact {
+        .contact-content {
+            .contact-links {
+                a {
+                    font-size: .95em;
+                }
+            }
+            .contact-form {
+                form {
+                    .name-label, .email-label, .message-label {
+                        font-size: 0.95em;
+                    }
+                    @include placeholder(0.95em, $white);
+                    button {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: $screen-sm-min) {
     .contact {
         .contact-content {
-          padding: 60px 40px 60px 80px;
+            padding: 60px 40px 60px 80px;
+            .contact-links {
+                padding-right: 20px;
+                a {
+                    font-size: 1.05em;
+                }
+            }
+            .contact-form {
+                form {
+                    .name-label, .email-label, .message-label {
+                        font-size: 1.05em;
+                    }
+                    @include placeholder(1.05em, $white);
+                    button {
+                        font-size: 1.7em;
+                    }
+                }
+            }
         }
     }
 }
 
 @media only screen and (min-width: $screen-md-min) {
-
+    .contact {
+        .contact-content {
+            .contact-links {
+                a {
+                    font-size: 1.15em;
+                }
+            }
+            .contact-form {
+                form {
+                    .name-label, .email-label, .message-label {
+                        font-size: 1.15em;
+                    }
+                    @include placeholder(1.15em, $white);
+                    button {
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: $screen-lg-min) {
@@ -107,3 +163,4 @@
         }
     }
 }
+

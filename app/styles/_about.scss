@@ -14,13 +14,22 @@
 }
 
 @media only screen and (min-width: $screen-xs-min) {
-
+    .about {
+        .about-banner {
+            .about-show {
+                font-size: 1.5em;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: $screen-sm-min) {
     .about {
         .about-banner {
-          padding: 60px 40px 60px 80px;
+            padding: 60px 40px 60px 80px;
+            .about-show {
+                font-size: 1.7em;
+            }
         }
         .about-content {
           padding: 60px 40px 60px 80px;

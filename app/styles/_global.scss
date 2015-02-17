@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    font-size: 2.2em;
+    font-size: 1.5em;
 }
 
 p {
@@ -29,6 +29,9 @@ p {
 }
 
 @media only screen and (min-width: $screen-xs-min) {
+    h1 {
+        font-size: 1.8em;
+    }
     p {
         font-size: .95em;
         line-height: 1.75em;
@@ -36,6 +39,9 @@ p {
 }
 
 @media only screen and (min-width: $screen-sm-min) {
+    h1 {
+        font-size: 2em;
+    }
     p {
         font-size: 1.05em;
         line-height: 1.8em;
@@ -43,6 +49,9 @@ p {
 }
 
 @media only screen and (min-width: $screen-md-min) {
+    h1 {
+        font-size: 2.2em;
+    }
     p {
         font-size: 1.15em;
         line-height: 1.8em;
