@@ -5,14 +5,19 @@
         @include content-module();
         .about-banner-button {
             padding-top: 20px;
+            padding-bottom: 30px;
             .about-show {
                 @include primary-button($yellow)
             }
         }
     }
+    .about-banner-padding {
+        padding-bottom: 0px;
+    }
     .about-content {
         display: none;
         @include content-module();
+        padding-top: 0;
     }
 }
 
@@ -33,13 +38,17 @@
         .about-banner {
             padding: 60px 40px 60px 80px;
             .about-banner-button {
+                padding-bottom: 0;
                 .about-show {
                     font-size: 1.7em;
                 }
             }
         }
+        .about-banner-padding {
+            padding-bottom: 60px;
+        }
         .about-content {
-          padding: 60px 40px 60px 80px;
+          padding: 0 40px 60px 80px;
             div {
                 &:first-of-type {
                     padding-right: 20px;
@@ -62,7 +71,7 @@
           padding: 60px 40px 60px 40px;
         }
         .about-content {
-          padding: 60px 40px 60px 40px;
+          padding: 0 40px 60px 40px;
         }
     }
 }

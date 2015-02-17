@@ -90,4 +90,5 @@ $('.contact-message input').focusout( function(){
 // Show About content 
 $('.about-show').click(function(){
 	$('.about-content').toggle();
+	$('.about-banner').toggleClass('about-banner-padding');
 })

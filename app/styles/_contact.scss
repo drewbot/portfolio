@@ -29,6 +29,7 @@
     }
     .contact-content {
         @include content-module();
+        padding-bottom: 40px;
         h2 {
             margin-top: 92px;
             margin-bottom: 30px;
@@ -70,7 +71,7 @@
                     @include transition(all 500ms ease-in);
                 }
                 .contact-message {
-                    margin-bottom: 70px;
+                    margin-bottom: 50px;
                 }
                 .input-focus-animate {
                     display: inline-block;
@@ -117,7 +118,7 @@
             height: 115px;
         }
         .contact-content {
-            padding: 60px 40px 60px 80px;
+            padding: 60px 40px 50px 80px;
             h2 {
                 margin-top: 52px;
                 margin-bottom: 60px;
@@ -151,6 +152,7 @@
             height: 130px;
         }
         .contact-content {
+            padding-bottom: 60px;
             .contact-links {
                 a {
                     font-size: 1.15em;
@@ -160,6 +162,9 @@
                 form {
                     .name-label, .email-label, .message-label {
                         font-size: 1.15em;
+                    }
+                    .contact-message {
+                        margin-bottom: 70px;
                     }
                     @include placeholder(1.15em, $white);
                     button {
