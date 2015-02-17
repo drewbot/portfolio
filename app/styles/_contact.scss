@@ -10,13 +10,13 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
         border-radius: 100%;
         border: 15px solid $orange;
         background-color: $orange;
         background: url('../images/down-arrow-o.svg') center center no-repeat;
-        // background-size: something;
+        background-size: 100% 100%;
     }
     .contact-triangle {
         position: absolute;
@@ -30,8 +30,9 @@
     .contact-content {
         @include content-module();
         h2 {
-            margin-top: 52px;
-            margin-bottom: 60px;
+            margin-top: 92px;
+            margin-bottom: 30px;
+            text-align: center;
         }
         .contact-links {
             padding: 15px 0 30px 0;
@@ -111,8 +112,17 @@
 
 @media only screen and (min-width: $screen-sm-min) {
     .contact {
+        &:after {
+            width: 115px;
+            height: 115px;
+        }
         .contact-content {
             padding: 60px 40px 60px 80px;
+            h2 {
+                margin-top: 52px;
+                margin-bottom: 60px;
+                text-align: left;
+            }
             .contact-links {
                 padding-right: 20px;
                 a {
@@ -136,6 +146,10 @@
 
 @media only screen and (min-width: $screen-md-min) {
     .contact {
+        &:after {
+            width: 130px;
+            height: 130px;
+        }
         .contact-content {
             .contact-links {
                 a {
