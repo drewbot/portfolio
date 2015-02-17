@@ -22,34 +22,42 @@
     input::-webkit-input-placeholder {
         font-size: $font-size;
         color: $color;
+        line-height: 0.9em;
     }
     input:-moz-placeholder { /* Firefox 18- */
         font-size: $font-size;
         color: $color;  
+        line-height: 0.9em;
     }
     input::-moz-placeholder {  /* Firefox 19+ */
         font-size: $font-size;
         color: $color;  
+        line-height: 0.9em;
     }
     input:-ms-input-placeholder {  
         font-size: $font-size;
         color: $color;  
+        line-height: 0.9em;
     }
     textarea::-webkit-input-placeholder {
         font-size: $font-size;
         color: $color;
+        line-height: 0.9em;
     }
     textarea:-moz-placeholder { /* Firefox 18- */
         font-size: $font-size;
         color: $color;  
+        line-height: 0.9em;
     }
     textarea::-moz-placeholder {  /* Firefox 19+ */
         font-size: $font-size;
         color: $color;  
+        line-height: 0.9em;
     }
     textarea:-ms-textarea-placeholder {  
         font-size: $font-size;
-        color: $color;  
+        color: $color; 
+        line-height: 0.9em; 
     }
 }
 
