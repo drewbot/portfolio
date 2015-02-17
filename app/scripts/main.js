@@ -29,20 +29,20 @@ var getWidthSetImage = function(){
 }
 
 // Get detail image height and set detail-stat-links height
-var detailImageHeight = function(){
-	var imageHeight = $('.detail-image').height();
-	$('.detail-stat-links').height(imageHeight);
-}
+// var detailImageHeight = function(){
+// 	var imageHeight = $('.detail-image').height();
+// 	$('.detail-stat-links').height(imageHeight);
+// }
 
 getWindowSetTriangle();
 // getWidthSetImage();
-detailImageHeight();
+// detailImageHeight();
 
 // On resize get window width
 window.onresize = function(event) {
   getWindowSetTriangle();
   // getWidthSetImage();
-  detailImageHeight();
+  // detailImageHeight();
 };
 
 

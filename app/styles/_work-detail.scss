@@ -2,39 +2,38 @@
 	background-color: $darkblue;
 	.detail-content {
 		@include content-module();
+		position: relative;
 		.detail-image {
 			img {
 				width: 100%;
 			}
 		}
 		.detail-stat-links {
-			position: relative;
 			padding-top: 30px;
+			padding-bottom: 100px;
 			.languages {
 				padding: 0 10px 0 10px;
 				.image-wrapper {
 					display: inline-block;
 					padding: 0 10px 0 10px;
-					width: 30%;
+					width: 32.3%;
 					img {
 						width: 100%;
 					}
 				}
 			}
-			.detail-buttons {
-				position: absolute;
-				bottom: 0;
-				width: 100%;
-				button {
-					@include primary-button($darkblue);
-					font-size: 1.6em;
-					width: 47%;
-					&:first-of-type {
-						margin-right: 2%;
-					}
-					&:last-of-type {
-						margin-left: 2%;
-					}
+		}
+		.detail-buttons {
+			bottom: 63px;
+			button {
+				@include primary-button($darkblue);
+				font-size: 1.2em;
+				width: 47%;
+				&:first-of-type {
+					margin-right: 2%;
+				}
+				&:last-of-type {
+					margin-left: 2%;
 				}
 			}
 		}
@@ -55,8 +54,33 @@
 	}
 }
 
-@media only screen and (min-width: $screen-xs-min) {
+.tester {
+	visibility: hidden;
+}
 
+@media only screen and (min-width: $screen-xs-min) {
+	.detail-top {
+		.detail-content {
+			.detail-image {
+				img {
+				}
+			}
+			.detail-stat-links {
+				.languages {
+					
+					.image-wrapper {
+						img {
+						}
+					}
+				}
+			}
+			.detail-buttons {
+				button {
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: $screen-sm-min) {
@@ -70,6 +94,7 @@
 			.detail-stat-links {
 				padding-left: 20px;
 				padding-top: 0;
+				padding-bottom: 0;
 				.languages {
 					padding: 0 20px 0 20px;
 					.image-wrapper {
@@ -78,15 +103,16 @@
 						}
 					}
 				}
-				.detail-buttons {
+			}
+			.detail-buttons {
+				position: absolute;
 					button {
-						width: 95%;
-						&:first-of-type {
-							margin-right: 0;
-						}
-						&:last-of-type {
-							margin-left: 0;
-						}
+					width: 44%;
+					&:first-of-type {
+						margin-right: 2%;
+					}
+					&:last-of-type {
+						margin-left: 2%;
 					}
 				}
 			}
@@ -95,7 +121,7 @@
 }
 
 // .tester {
-// 	visibility: hidden;
+// 	visibility: visible;
 // }
 
 @media only screen and (min-width: $screen-md-min) {
@@ -113,17 +139,18 @@
 						}
 					}
 				}
-				.detail-buttons {
-					button {
-						width: 44%;
-						&:first-of-type {
-							margin-right: 2%;
-						}
-						&:last-of-type {
-							margin-left: 2%;
-						}
-					}
-				}
+			}
+			.detail-buttons {
+				// button {
+				// 	font-size: 1.8em;
+				// 	width: 44%;
+				// 	&:first-of-type {
+				// 		margin-right: 2%;
+				// 	}
+				// 	&:last-of-type {
+				// 		margin-left: 2%;
+				// 	}
+				// }
 			}
 		}
 	}
