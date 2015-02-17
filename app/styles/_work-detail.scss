@@ -4,6 +4,10 @@
 		@include content-module();
 		padding-bottom: 0;
 		position: relative;
+		h1 {
+			margin-bottom: 30px;
+			text-align: center;
+		}
 		.detail-image {
 			img {
 				width: 100%;
@@ -11,7 +15,7 @@
 		}
 		.detail-stat-links {
 			padding-top: 30px;
-			padding-bottom: 100px;
+			padding-bottom: 80px;
 			.languages {
 				padding: 0 10px 0 10px;
 				.image-wrapper {
@@ -25,7 +29,7 @@
 			}
 		}
 		.detail-buttons {
-			bottom: 63px;
+			bottom: 43px;
 			button {
 				@include primary-button($darkblue);
 				font-size: 1.2em;
@@ -47,9 +51,11 @@
 		@include content-module();
 		padding-top: 0;
 		h1 {
+			display: none;
 			text-align: center;
 		}
 		p {
+			margin-top: 0;
 			text-align: center;
 		}
 	}
@@ -89,6 +95,9 @@
 	.detail-top {
 		.detail-content {
 			padding-bottom: 60px;
+			h1 {
+				display: none;
+			}
 			.detail-image {
 				padding-right: 10px;
 				img {
@@ -97,7 +106,7 @@
 			.detail-stat-links {
 				padding-left: 10px;
 				padding-top: 0;
-				padding-bottom: 0;
+				padding-bottom: 100px;
 				.languages {
 					padding: 0 20px 0 20px;
 					.image-wrapper {
@@ -109,16 +118,23 @@
 			}
 			.detail-buttons {
 				position: absolute;
+				bottom: 63px;
 				button {
 				}
 			}
 		}
 	}
+	.detail-bottom {
+		.detail-content {
+			h1 {
+				display: inline-block;
+			}
+			p {
+				margin-top: 15px;
+			}
+		}
+	}
 }
-
-// .tester {
-// 	visibility: visible;
-// }
 
 @media only screen and (min-width: $screen-md-min) {
 	.detail-top {
@@ -137,7 +153,7 @@
 				}
 			}
 			.detail-buttons {
-
+				bottom: 70px;
 			}
 		}
 	}

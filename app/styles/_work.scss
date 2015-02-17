@@ -82,6 +82,7 @@
             margin-right: auto;
             left: 0;
             right: 0;
+            font-size: 0.85em;
             color: $white;
             z-index: 2;
             @include transition(all 0.3s ease);
@@ -98,13 +99,34 @@
 }
 
 @media only screen and (min-width: $screen-xs-min) {
-
+  .work {
+    .work-content {
+      div {
+        a {
+          figure {
+            figcaption {
+              font-size: 0.95em;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $screen-sm-min) {
   .work {
     .work-content {
       padding: 80px 30px 110px 80px;
+      div {
+        a {
+          figure {
+            figcaption {
+              font-size: 1.05em;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -112,12 +134,19 @@
 @media only screen and (min-width: $screen-md-min) {
 	.work {
     .work-content {
+      padding: 80px 40px 120px 80px;
       h2 {
       	margin-bottom: 90px;
       	text-align: right;
       }
       div {
-
+        a {
+          figure {
+            figcaption {
+              font-size: 1.15em;
+            }
+          }
+        }
       }
     }
 	}
@@ -134,3 +163,4 @@
     }
   }
 }
+

@@ -3,8 +3,11 @@
     background-color: $yellow;
     .about-banner {
         @include content-module();
-        .about-show {
-        	@include primary-button($yellow)
+        .about-banner-button {
+            padding-top: 20px;
+            .about-show {
+                @include primary-button($yellow)
+            }
         }
     }
     .about-content {
@@ -16,8 +19,10 @@
 @media only screen and (min-width: $screen-xs-min) {
     .about {
         .about-banner {
-            .about-show {
-                font-size: 1.5em;
+            .about-banner-button {
+                .about-show {
+                    font-size: 1.5em;
+                }
             }
         }
     }
@@ -27,8 +32,10 @@
     .about {
         .about-banner {
             padding: 60px 40px 60px 80px;
-            .about-show {
-                font-size: 1.7em;
+            .about-banner-button {
+                .about-show {
+                    font-size: 1.7em;
+                }
             }
         }
         .about-content {
