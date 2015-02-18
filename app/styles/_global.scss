@@ -53,6 +53,16 @@ p {
         font-size: 2.2em;
     }
     p {
+        font-size: 1.08em;
+        line-height: 1.8em;
+    }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+    h1 {
+        font-size: 2.2em;
+    }
+    p {
         font-size: 1.15em;
         line-height: 1.8em;
     }

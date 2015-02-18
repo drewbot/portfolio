@@ -18,6 +18,15 @@
         display: none;
         @include content-module();
         padding-top: 0;
+        p {
+            a {
+                display: inline-block;
+                text-decoration: underline;
+                &:hover {
+                    color: lighten($orange, 35%)
+                }
+            }
+        }
     }
 }
 
