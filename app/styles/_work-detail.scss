@@ -7,6 +7,10 @@
 		h1 {
 			margin-bottom: 30px;
 			text-align: center;
+			span {
+				font-size: 0.8em;
+				line-height: 2.5em;
+			}
 		}
 		.detail-image {
 			a {
@@ -102,10 +106,21 @@
 			display: none;
 			text-align: center;
 			width: 100%;
+			span {
+				font-size: 0.7em;
+				line-height: 2.5em;
+			}
 		}
 		p {
 			margin-top: 0;
 			text-align: center;
+			a {
+				display: inline-block;
+				text-decoration: underline;
+				&:hover {
+					color: lighten($darkblue, 50%);
+				}
+			}
 		}
 	}
 }
