@@ -1,0 +1,7 @@
+.confirmation {
+	padding-top: 70px;
+	text-align: center;
+	button {
+		@include primary-button($darkblue);
+	}
+}

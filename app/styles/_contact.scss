@@ -79,9 +79,12 @@
                     @include transition(all 800ms ease-in);
                 }
                 @include placeholder(0.85em, $white);
-                button {
+                .contact-submit {
                     @include primary-button($orange);
-                    // margin-top: 65px;
+                    width: auto;
+                    &:focus {
+                        background-color: lighten($orange, 10%)
+                    }
                 }
             }
         }
@@ -102,7 +105,7 @@
                         font-size: 0.95em;
                     }
                     @include placeholder(0.95em, $white);
-                    button {
+                    .contact-submit {
                         font-size: 1.5em;
                     }
                 }
@@ -136,7 +139,7 @@
                         font-size: 1.05em;
                     }
                     @include placeholder(1.05em, $white);
-                    button {
+                    .contact-submit {
                         font-size: 1.7em;
                     }
                 }
@@ -167,7 +170,7 @@
                         margin-bottom: 70px;
                     }
                     @include placeholder(1.15em, $white);
-                    button {
+                    .contact-submit {
                     }
                 }
             }

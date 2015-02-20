@@ -7,7 +7,11 @@
             padding-top: 20px;
             padding-bottom: 30px;
             .about-show {
-                @include primary-button($yellow)
+                @include primary-button($yellow);
+                outline: none;
+                &:focus {
+                    background-color: lighten($yellow, 10%);
+                }
             }
         }
     }
@@ -23,7 +27,7 @@
                 display: inline-block;
                 text-decoration: underline;
                 &:hover {
-                    color: lighten($orange, 35%)
+                    color: lighten($orange, 35%);
                 }
             }
         }
