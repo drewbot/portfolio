@@ -38,7 +38,7 @@ nav {
 
 @media only screen and (min-width: $screen-sm-min) {
   nav {
-    bottom: 35vh;
+    bottom: 37%;
     width: auto;
     ul {
       li {
@@ -77,4 +77,25 @@ nav {
 
 @media only screen and (min-width: $screen-lg-min) {
 
+}
+
+// iPad with portrait orientation.
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  header {
+    height: auto;
+  }
+}
+ 
+// iPad with landscape orientation.
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  header {
+    height: auto;
+  }
+}
+ 
+// iPhone 5
+@media screen and (device-aspect-ratio: 40/71) {
+  header {
+    height: auto;
+  }
 }

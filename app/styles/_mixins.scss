@@ -82,11 +82,11 @@
 @mixin primary-button($bg-color) {
     padding: 17px 25px 20px 25px;
     background-color: darken($bg-color, 2%);
-    font-family: "Londrina Shadow", sans-serif;
-    font-size: 1.3em;
+    font-family: 'Bree Serif', serif;
+    font-size: 1em;
     color: $white;
     text-align: center;
-    @include font-smoothing(auto);
+    @include font-smoothing(antialiased);
     border-width: 1px 2px 3px 1px;
     border-style: solid;
     border-color: $white;
@@ -98,7 +98,6 @@
     }
     &:active {
         margin-top: 2px;
-        // background-color: lighten($bg-color, 1%);
         color: darken($bg-color, 15%);
         border-color: darken($bg-color, 12%);
         border-width: 1px;
