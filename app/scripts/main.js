@@ -1,7 +1,7 @@
 
 /////////////////////////////////////// Triangles
-// get window width
 var getWindowSetTriangle = function(){
+	// get window width
 	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 	// Set css triangles on work section and contact section to window width
 	$(".work-triangle").css({
@@ -16,17 +16,6 @@ var getWindowSetTriangle = function(){
 	$(".contact-triangle").css({
 	  "border-left": w + 'px solid transparent'
 	});
-}
-
-// establishing image size in gallery
-// The anchor seems to be what was causing the staggering
-var getWidthSetImage = function(){
-	// get the width of the column
-	var imageWidth = $('.work-content div').width();
-	var imageHeight = $('.work-content div').height();
-	// set width and height of <a> based on div size
-	$('.work-content div a').width(imageWidth);
-	$('.work-content div a').height(imageHeight);
 }
 
 getWindowSetTriangle();
